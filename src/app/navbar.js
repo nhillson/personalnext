@@ -16,6 +16,9 @@ export default function NavBar() {
       <Link href="/about" className="navbar-link">
         About Me
       </Link>
+      <Link href="/languages" className="navbar-link">
+        Languages/Frameworks
+      </Link>
     </div>
   );
 }
