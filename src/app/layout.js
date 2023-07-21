@@ -1,6 +1,6 @@
-import NavBar from "./navbar"
+import NavBar from "./navbar";
 
-export default function RootLayout ({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
@@ -8,5 +8,5 @@ export default function RootLayout ({ children }) {
         {children}
       </body>
     </html>
-  )
+  );
 }

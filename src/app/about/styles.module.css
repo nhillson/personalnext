@@ -19,10 +19,15 @@
 .content {
     display: flex;
     justify-content: space-around;
+    width: 50%;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+}
+.centered {
+    display: flex;
+    justify-content: center;
 }

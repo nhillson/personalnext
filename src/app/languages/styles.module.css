@@ -1,0 +1,42 @@
+.table_lang {
+    font-size: 20px;
+}
+
+.table_resource {
+    font-size: 15px;
+}
+
+.langtable tr:nth-child(even) {
+    background-color: #c1c4e8;
+}
+
+.table {
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 30px;
+}
+
+.th {
+    padding: 10px;
+    font-size: 30px;
+}
+
+.tr {
+    border: 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.caret {
+    margin-right: 0%;
+    width: 25px;
+}
