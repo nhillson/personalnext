@@ -1,0 +1,28 @@
+.title {
+    text-align: center;
+    width: 70%;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prof_description {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    height: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
