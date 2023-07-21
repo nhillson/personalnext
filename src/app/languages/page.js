@@ -1,3 +1,8 @@
+'use client'
+
+import { useState } from "react";
+import styles from './styles.module.css'
+
 const langs = [
   { language: "C", resources: ["Harvard's CS50X"] },
   {
@@ -23,10 +28,63 @@ const langs = [
   { language: "React", resources: ["Harvard's CS50W", "React Documentation"] },
 ];
 
+function LangItem({ lang, activeRow, onShow }) {
+  let language = lang.language;
+  let resources = lang.resources.join(", ");
+  return (
+    <tr onClick={onShow} className={styles.tr}>
+      <td className={styles.td}>
+        <div className={styles.table_lang}>
+          <b>{language}</b>
+        </div>
+        {activeRow === language ? (
+          <div className={styles.table_resource}>Resources: {resources}</div>
+        ) : (
+          <div></div>
+        )}
+      </td>
+      <td className={styles.caret}>
+        <img src="images/caret.svg" alt="caret" className={styles.caret}/>
+      </td>
+    </tr>
+  );
+}
+
+function LangList() {
+  const [activeRow, setActiveRow] = useState("None");
+  const rows = [];
+  langs.forEach((lang) => {
+    rows.push(
+      <LangItem
+        lang={lang}
+        activeRow={activeRow}
+        onShow={() => {
+          if (lang.language === activeRow) {
+            setActiveRow("None");
+          } else {
+            setActiveRow(lang.language);
+          }
+        }}
+        key={lang.language}
+      />
+    );
+  });
+  return (
+    <table className={`${styles.langtable} ${styles.table}`}>
+      <thead>
+        <tr>
+        <th className={styles.th}>Languages</th>
+        </tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+  );
+}
+
 export default function Languages() {
     return (
         <div>
-            <h1>Hello, languages</h1>
+            <LangList />
         </div>
     )
 }
