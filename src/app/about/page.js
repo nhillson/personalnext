@@ -43,22 +43,24 @@ export default function About() {
           Cities area.
         </p>
       </div>
-      <div className={styles.content}>
-        <div className={styles.column}>
-        <h4 className={styles.column}>I am a...</h4>
-        <ul>
-            <li>
+      <div className={styles.centered}>
+        <div className={styles.content}>
+          <div className={styles.column}>
+            <h4 className={styles.column}>I am a...</h4>
+            <ul>
+              <li>
                 <Link href="/">Programmer</Link>
-            </li>
-        </ul>
-        </div>
-        <div className={styles.column}>
-        <h4>I enjoy...</h4>
-        <ul>
-            <li>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.column}>
+            <h4>I enjoy...</h4>
+            <ul>
+              <li>
                 <Link href="/mushapp">Mycology</Link>
-            </li>
-        </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
