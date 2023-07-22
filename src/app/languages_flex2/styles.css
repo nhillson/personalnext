@@ -1,0 +1,32 @@
+.lang-page-container {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.outer {
+    flex-direction: column;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: bold;
+    margin: 2rem 0rem;
+}
+
+.row {
+    padding: 1rem;
+    border: 2px solid black;
+    border-bottom: 0px;
+    min-width: 50%;
+    
+}
+
+.carat {
+    display: flex;
+}
+
+.row:last-child
+{
+    border-bottom: 2px solid black;
+}
