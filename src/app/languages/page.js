@@ -28,11 +28,11 @@ const langs = [
   { language: "React", resources: ["Harvard's CS50W", "React Documentation"] },
 ];
 
-function LangItem({ lang, activeRow, onShow }) {
+function LangItem({ lang, activeRow, onClick }) {
   let language = lang.language;
   let resources = lang.resources.join(", ");
   return (
-    <tr onClick={onShow} className={styles.tr}>
+    <tr onClick={onClick} className={styles.tr}>
       <td className={styles.td}>
         <div className={styles.table_lang}>
           <b>{language}</b>
@@ -58,7 +58,7 @@ function LangList() {
       <LangItem
         lang={lang}
         activeRow={activeRow}
-        onShow={() => {
+        onClick={() => {
           if (lang.language === activeRow) {
             setActiveRow("None");
           } else {
